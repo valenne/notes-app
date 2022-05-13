@@ -1,0 +1,14 @@
+1. Installing the required packages
+  - DEvdependencies
+  . npm install nodemon -D
+  
+  - packages
+  . express > OK
+  . body-parser
+  . cors
+  . pg
+  . dotenv
+  . jwt
+  . express-handlebars > OK
+  . cookie-parser
+
