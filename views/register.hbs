@@ -1,0 +1,107 @@
+<section class="register">
+  <div class="register-row">
+    <div class="register-img">
+      <div class="register-img--text">
+        <div class="register-img-sup">
+          <h2 class="register-img-left--title">We can work together</h2>
+          <p class="register-img-left--phrase">Saves with us the important
+            things, until when you need it</p>
+        </div>
+
+        <span class="register-img-left--date">fecha</span>
+      </div>
+    </div>
+    <div class="register-main-form">
+      <div class="register-main-form--header">
+        <h2>Join to us</h2>
+        <div class="register-uhave">
+          <p>Already have an account?</p>
+          <a href="/login">Login</a>
+        </div>
+      </div>
+
+      <div class="register-form-box">
+        <div class="register-form-boxinner">
+          <form action="/register" class="register-form">
+            {{! first row }}
+            <div class="form-group grid grid-2cols">
+              <div class="form-firstName">
+                <label for="user_firstName">
+                  First Name
+                </label>
+                <input
+                  type="text"
+                  id="user_firstName"
+                  required="required"
+                  autofocus="autofocus"
+                />
+              </div>
+              <div class="form-lastName">
+                <label for="user_lastName">
+                  Last Name
+                </label>
+                <input
+                  type="text"
+                  id="user_lastName"
+                  required="required"
+                  autofocus="autofocus"
+                />
+              </div>
+            </div>
+            {{! second row }}
+            <div class="form-group grid">
+              <div class="form-email">
+                <label for="user_email">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="user_email"
+                  required="required"
+                  autofocus="autofocus"
+                  value=""
+                />
+              </div>
+            </div>
+            {{! third row }}
+            <div class="form-group grid">
+              <div class="form-username">
+                <label for="username">
+                  Username
+                </label>
+                <input
+                  type="email"
+                  id="username"
+                  required="required"
+                  autofocus="autofocus"
+                  value=""
+                />
+              </div>
+            </div>
+            {{! fourth row }}
+            <div class="form-group grid">
+              <div class="form-password">
+                <label for="user-password">
+                  Password (min. 8 char)
+                </label>
+                <input
+                  type="password"
+                  id="user-password"
+                  required="required"
+                  autofocus="autofocus"
+                  autocomplete="off"
+                  minlength="8"
+                  value=""
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <a href="" class="btn btn-register">Join</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

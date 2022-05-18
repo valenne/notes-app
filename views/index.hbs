@@ -1,0 +1,100 @@
+<section class="hero-section"><div class="hero">
+    {{! header part }}
+    <div class="fixed-hero">
+      <header class="header container sticky">
+        <div class="header-box__logo">
+          <a class="header-box__logo-link a-links" href="/"><ion-icon
+              class="header-logo"
+              name="duplicate-outline"
+            ></ion-icon>
+            <div>
+              <span class="header-logo__text">yourNotes</span>
+            </div></a>
+        </div>
+
+        <div class="header-logo__socials">
+          <ul>
+            <li><a href="https://github.com/valenne"><ion-icon
+                  class="header-logo"
+                  name="logo-github"
+                ></ion-icon></a></li>
+          </ul>
+        </div>
+      </header>
+
+      {{! hero part }}
+      <div class="hero-container">
+        <div class="hero-box">
+
+          <div class="hero-box__left">
+            <p class="hero-box__text">
+              <span class="hero-box__text--desc">
+                Your thoughts are important, save it
+              </span>
+            </p>
+            <div class="split-button-container">
+              <div class="split-button-main active">
+                <button class="btn" onclick="splitChild()">
+                  Try yourNotes
+                </button>
+              </div>
+              <div class="split-button-child hidden">
+                <a href="/login"><button class="btn">Login</button></a>
+                <a href="/register"><button class="btn">Register</button></a>
+                <ion-icon
+                  name="arrow-back-outline"
+                  class="logo-undo"
+                  onclick="heroUndo()"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+          <div class="hero-box__right"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="how-section container">
+  <div class="how-header">
+    <h2>One idea can change everything</h2>
+    <p>Add Notes, lists and photos. </p>
+  </div>
+  <div class="how-main">
+    {{! box 1 }}
+    <div class="how-main-box">
+      <div class="how-main-box__inner">
+        <div class="how-main-box__square">cuadrado</div>
+        <span>fecha:</span>
+      </div>
+      <div>icon</div>
+    </div>
+    {{! box 2 }}
+    <div class="how-main-box">
+      <div class="how-main-box__inner">
+        <div class="how-main-box__square">cuadrado</div>
+        <span>fecha:</span>
+      </div>
+      <div>icon</div>
+    </div>
+    {{! box 3 }}
+    <div class="how-main-box">
+      <div class="how-main-box__inner">
+        <div class="how-main-box__square">cuadrado</div>
+        <span>fecha:</span>
+      </div>
+      <div>icon</div>
+    </div>
+    {{! box 4 }}
+    <div class="how-main-box">
+      <div class="how-main-box__inner">
+        <div class="how-main-box__square">cuadrado</div>
+        <span>fecha:</span>
+      </div>
+      <div>icon</div>
+    </div>
+  </div>
+
+</section>
+
+<script src="/js/button-helper.js"></script>

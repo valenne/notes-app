@@ -1,0 +1,25 @@
+section how it works
+
+document: 
+
+<ion-icon name="document-text-outline"></ion-icon>
+
+list: 
+
+<ion-icon name="list-outline"></ion-icon>
+
+imagen
+
+<ion-icon name="camera-outline"></ion-icon>
+
+notepad
+
+<ion-icon name="camera-outline"></ion-icon>
+
+section header logo icon
+
+<ion-icon name="duplicate-outline"></ion-icon>
+
+github
+
+<ion-icon name="logo-github"></ion-icon>

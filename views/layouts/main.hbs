@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{! google fonts }}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    {{! css files  bootstrap }}
+    <link rel="/css/bootstrap.min.css" />
+
+    {{! css public }}
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    {{! jquery }}
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+
+    {{! js bootstrap }}
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"
+    ></script>
+
+    {{! axios }}
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>{{title}}</title>
+  </head>
+  <body>
+
+    {{! <header class="header">
+      <div class="header-container">
+        <div class="header-box__logo">
+          <a class="header-box__logo-link a-links" href="#"><ion-icon
+              class="header-logo"
+              name="duplicate-outline"
+            ></ion-icon>
+            <div>
+              <span class="header-logo__text">yourNotes</span>
+            </div></a>
+        </div>
+      </div>
+      <div class="header-logo__socials">
+        <ul>
+          <li><a href="#"><ion-icon
+                class="header-logo"
+                name="logo-github"
+              ></ion-icon></a></li>
+        </ul>
+      </div>
+    </header> }}
+    <main>
+      {{{body}}}
+    </main>
+  </body>
+</html>
