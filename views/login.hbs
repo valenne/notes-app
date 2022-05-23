@@ -1,1 +1,62 @@
-<h1>LOGIN</h1>
+<section class="login">
+  <div class="container-login">
+    <div class="header-box__logo">
+          <a class="header-box__logo-link a-links" href="/"><ion-icon
+              class="header-logo"
+              name="duplicate-outline"
+            ></ion-icon>
+            <div>
+              <span class="header-logo__text --text-dark">yourNotes</span>
+            </div></a>
+         
+    </div>
+    <div>
+      <span class="--text-medium">Welcome back.</span>
+    </div>
+ 
+  <form action="/dashboard" method="POST" id="login-form" class="login-form --form">
+  <div>
+    <p class="--text-medium">Log in</p>
+  </div>
+    {{! first row }}
+
+    <div class="form-group form-firstName">
+      </label>
+      <input
+        type="text"
+        id="credentials"
+        name="credentials"
+        required
+        autofocus="autofocus"
+        placeholder="Email address or username"
+      />
+    </div>
+
+    {{! fourth row }}
+
+    <div class="form-group form-password">
+   
+  
+      </label>
+      <input
+        type="password"
+        id="login-password"
+        required="required"
+        name="password"
+        autofocus="autofocus"
+        placeholder="Password"
+        autocomplete="off"
+        minlength="8"
+        value=""
+      />
+    </div>
+
+    <button type="submit" id="btnLogin" class="form-group btn">
+      Log in
+    </button>
+  </form>
+  <div>
+    <span class="--text-medium">Don’t have an account? <a href="/register" class="--a-linkto">Join yourNotes</a></span>
+  </div>
+</div>
+</section>

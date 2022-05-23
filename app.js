@@ -1,15 +1,23 @@
 const express = require("express");
-const app = express();
-const bodyParser = require("body-parser");
-const cors = require("cors");
 const exphbs = require("express-handlebars");
+const bodyParser = require("body-parser");
+const app = express();
+const cors = require("cors");
 
 require("dotenv").config();
 
 // + importing our variables
-const { port } = require("./config.js");
+const { port } = require("./config/server.config.js");
+
+// importing routes
+const routesController = require("./routes/app.router.js");
+
+/**
+ *  App Configuration
+ */
 
 // midlewares
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors({ origin: true }));
@@ -40,24 +48,19 @@ app.set("view engine", "hbs");
 
 // routes
 
-app.get("/", (req, res) => {
-  res.status(200).render("index", {
-    title: "Home",
-  });
-});
-
-// register
-
-app.get("/register", (req, res) => {
-  res.status(200).render("register", {
-    title: "Register",
-  });
-});
+// router.middlewares
+app.use(routesController);
 
 // login
 app.get("/login", (req, res) => {
   res.status(200).render("login", {
     title: "Login",
+  });
+});
+
+app.get("*", (_, res) => {
+  res.status(404).render("404", {
+    title: "404",
   });
 });
 

@@ -1,6 +1,7 @@
 <section class="register">
   <div class="register-row">
     <div class="register-img">
+
       <div class="register-img--text">
         <div class="register-img-sup">
           <h2 class="register-img-left--title">We can work together</h2>
@@ -8,7 +9,7 @@
             things, until when you need it</p>
         </div>
 
-        <span class="register-img-left--date">fecha</span>
+        <span class="register-img-left--date" id="register-date"></span>
       </div>
     </div>
     <div class="register-main-form">
@@ -16,92 +17,100 @@
         <h2>Join to us</h2>
         <div class="register-uhave">
           <p>Already have an account?</p>
-          <a href="/login">Login</a>
+          <a href="/login" class="--a-linkto">Login</a>
         </div>
       </div>
 
       <div class="register-form-box">
         <div class="register-form-boxinner">
-          <form action="/register" class="register-form">
+          <form action="/register" method="POST" id="register-form">
             {{! first row }}
-            <div class="form-group grid grid-2cols">
-              <div class="form-firstName">
-                <label for="user_firstName">
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  id="user_firstName"
-                  required="required"
-                  autofocus="autofocus"
-                />
-              </div>
-              <div class="form-lastName">
-                <label for="user_lastName">
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  id="user_lastName"
-                  required="required"
-                  autofocus="autofocus"
-                />
-              </div>
-            </div>
-            {{! second row }}
-            <div class="form-group grid">
-              <div class="form-email">
-                <label for="user_email">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="user_email"
-                  required="required"
-                  autofocus="autofocus"
-                  value=""
-                />
-              </div>
-            </div>
-            {{! third row }}
-            <div class="form-group grid">
-              <div class="form-username">
-                <label for="username">
-                  Username
-                </label>
-                <input
-                  type="email"
-                  id="username"
-                  required="required"
-                  autofocus="autofocus"
-                  value=""
-                />
-              </div>
-            </div>
-            {{! fourth row }}
-            <div class="form-group grid">
-              <div class="form-password">
-                <label for="user-password">
-                  Password (min. 8 char)
-                </label>
-                <input
-                  type="password"
-                  id="user-password"
-                  required="required"
-                  autofocus="autofocus"
-                  autocomplete="off"
-                  minlength="8"
-                  value=""
-                />
-              </div>
+
+            <div class="form-group form-firstName">
+              <label for="user_firstName">
+                First Name
+              </label>
+              <input
+                type="text"
+                id="user_firstName"
+                name="firstName"
+                required
+                autofocus="autofocus"
+              />
             </div>
 
-            <div class="form-group">
-              <a href="" class="btn btn-register">Join</a>
+            <div class="form-group orm-lastName">
+              <label for="user_lastName">
+                Last Name
+              </label>
+              <input
+                type="text"
+                id="user_lastName"
+                name="lastName"
+                required="required"
+                autofocus="autofocus"
+              />
             </div>
+
+            {{! second row }}
+
+            <div class="form-group form-email">
+              <label for="user_email">
+                Email
+              </label>
+              <input
+                type="email"
+                id="user_email"
+                name="email"
+                required="required"
+                autofocus="autofocus"
+                value=""
+              />
+            </div>
+
+            {{! third row }}
+
+            <div class="form-group form-username">
+              <label for="username">
+                Username
+              </label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                required="required"
+                autofocus="autofocus"
+                value=""
+              />
+            </div>
+
+            {{! fourth row }}
+
+            <div class="form-group form-password">
+              <label for="user-password">
+                Password (min. 8 char)
+              </label>
+              <input
+                type="password"
+                id="user-password"
+                required="required"
+                name="password"
+                autofocus="autofocus"
+                autocomplete="off"
+                minlength="8"
+                value=""
+              />
+            </div>
+
+            <button type="submit" id="btnRegister" class="form-group btn">
+              Join
+            </button>
           </form>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
+<script src="/js/register-function.js"></script>
