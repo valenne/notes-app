@@ -23,4 +23,21 @@ module.exports = {
       return null;
     }
   },
+  getUser: async (email) => {
+    try {
+      const consult = {
+        text: `SELECT * FROM users WHERE email = $1`,
+        values: [email],
+      };
+
+      const response = await pool.query(consult);
+      return response.rows[0];
+    } catch (err) {
+      console.log({
+        error: `Database error, getUser module`,
+        message: `${err}`,
+      });
+      return null;
+    }
+  },
 };

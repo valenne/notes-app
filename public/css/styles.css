@@ -159,6 +159,10 @@ body {
 .--text-dark {
   color: var(--main-color-dark);
 }
+.--text-white {
+  color: var(--main-color-white);
+  font-weight: 500;
+}
 /*----------------------------------------*/
 /*-----------------HEADER-----------------*/
 /*----------------------------------------*/
@@ -218,12 +222,13 @@ body {
 }
 
 .fixed-hero {
-  background-image: url("/img/hero-bg.jpg");
+  background-image: url("/img/hero-bg2.jpg");
   background-size: cover;
+
   background-repeat: no-repeat;
   max-height: 58rem;
-  /* background-attachment: fixed; */
-  background-position: center center;
+  background-position: bottom left;
+
   z-index: -1;
 }
 
@@ -462,13 +467,24 @@ body {
 /*-----------------LOGIN------------------*/
 /*----------------------------------------*/
 
+.login {
+  /* height: 100vh; */
+  gap: 1.2rem;
+  background-image: url("../img/login-bg.jpg");
+  opacity: 0.9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  object-fit: cover;
+}
+
 .container-login {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2.4rem;
-  height: 70vh;
+  height: 100%;
+  width: 100%;
   gap: 1.2rem;
 }
 
@@ -479,10 +495,15 @@ body {
   align-items: center;
   min-width: 30rem;
   min-height: 15rem;
-  margin: 0 auto;
+  margin: 1.2rem 1.2rem;
   gap: 1.2rem;
   padding: 2.4rem;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.9;
   border-radius: 8px;
-  box-shadow: 0px 0px 8px 1px var(--main-color-light);
+  box-shadow: 0px 0px 4px var(--main-color-light);
 }
+
+/*----------------------------------------*/
+/*---------------DASHBOARD----------------*/
+/*----------------------------------------*/

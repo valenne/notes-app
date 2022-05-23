@@ -19,7 +19,7 @@ CREATE TABLE tasks (
   id SERIAL PRIMARY KEY,
   title_task VARCHAR(50) NOT NULL,
   description VARCHAR(200) NOT NULL,
-  image_task VARCHAR(255) NOT NULL,
+  image_task VARCHAR(255),
   date_created TIMESTAMP NOT NULL,
   date_completed TIMESTAMP,
   status_task BOOLEAN NOT NULL,

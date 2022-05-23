@@ -46,17 +46,8 @@ app.engine(
 
 app.set("view engine", "hbs");
 
-// routes
-
 // router.middlewares
 app.use(routesController);
-
-// login
-app.get("/login", (req, res) => {
-  res.status(200).render("login", {
-    title: "Login",
-  });
-});
 
 app.get("*", (_, res) => {
   res.status(404).render("404", {

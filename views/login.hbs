@@ -1,20 +1,21 @@
 <section class="login">
   <div class="container-login">
+    
     <div class="header-box__logo">
           <a class="header-box__logo-link a-links" href="/"><ion-icon
               class="header-logo"
               name="duplicate-outline"
             ></ion-icon>
             <div>
-              <span class="header-logo__text --text-dark">yourNotes</span>
+              <span class="header-logo__text --text-white">yourNotes</span>
             </div></a>
          
     </div>
     <div>
-      <span class="--text-medium">Welcome back.</span>
+      <span class="--text-medium --text-white">Welcome back.</span>
     </div>
  
-  <form action="/dashboard" method="POST" id="login-form" class="login-form --form">
+  <form action="/login" method="POST" id="login-form" class="login-form --form">
   <div>
     <p class="--text-medium">Log in</p>
   </div>
@@ -23,16 +24,16 @@
     <div class="form-group form-firstName">
       </label>
       <input
-        type="text"
-        id="credentials"
-        name="credentials"
+        type="email"
+        id="loginEmail"
+        name="email"
         required
         autofocus="autofocus"
-        placeholder="Email address or username"
+        placeholder="Email address"
       />
     </div>
 
-    {{! fourth row }}
+    {{! second row }}
 
     <div class="form-group form-password">
    
@@ -40,14 +41,14 @@
       </label>
       <input
         type="password"
-        id="login-password"
-        required="required"
+        id="loginPassword"
         name="password"
         autofocus="autofocus"
         placeholder="Password"
         autocomplete="off"
         minlength="8"
         value=""
+        required
       />
     </div>
 
@@ -56,7 +57,10 @@
     </button>
   </form>
   <div>
-    <span class="--text-medium">Don’t have an account? <a href="/register" class="--a-linkto">Join yourNotes</a></span>
+    <span class="--text-medium --text-white">Don’t have an account? <a href="/register" class="--a-linkto">Join yourNotes</a></span>
   </div>
+ 
 </div>
 </section>
+
+<script src="js/login-function.js"></script>
