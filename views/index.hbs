@@ -1,32 +1,35 @@
+<header class="header sticky">
+  <div class="header-box__logo">
+    <a class="header-box__logo-link a-links" href="/"><ion-icon
+        class="header-logo"
+        name="duplicate-outline"
+      ></ion-icon>
+      <div>
+        <span class="header-logo__text">yourNotes</span>
+      </div></a>
+  </div>
+
+  <div class="header-logo__socials">
+    <ul>
+      <li><a href="https://github.com/valenne"><ion-icon
+            class="header-logo"
+            name="logo-github"
+          ></ion-icon></a></li>
+    </ul>
+  </div>
+</header>
+
 <section class="hero-section"><div class="hero">
     {{! header part }}
     <div class="fixed-hero">
-      <header class="header container sticky">
-        <div class="header-box__logo">
-          <a class="header-box__logo-link a-links" href="/"><ion-icon
-              class="header-logo"
-              name="duplicate-outline"
-            ></ion-icon>
-            <div>
-              <span class="header-logo__text">yourNotes</span>
-            </div></a>
-        </div>
-
-        <div class="header-logo__socials">
-          <ul>
-            <li><a href="https://github.com/valenne"><ion-icon
-                  class="header-logo"
-                  name="logo-github"
-                ></ion-icon></a></li>
-          </ul>
-        </div>
-      </header>
 
       {{! hero part }}
       <div class="hero-container">
+
         <div class="hero-box">
 
           <div class="hero-box__left">
+
             <p class="hero-box__text">
               <span class="hero-box__text--desc">
                 Your thoughts are important, save it
@@ -55,46 +58,56 @@
     </div>
   </div>
 </section>
-<section class="how-section container">
-  <div class="how-header">
+
+<section class="how-section">
+  <div class="how-header container">
     <h2>One idea can change everything</h2>
+
     <p>Add Notes, lists and photos. </p>
   </div>
-  <div class="how-main">
-    {{! box 1 }}
-    <div class="how-main-box">
-      <div class="how-main-box__inner">
-        <div class="how-main-box__square">cuadrado</div>
-        <span>fecha:</span>
+  <div class="keep">
+    {{! 1 fila }}
+    <div class="keep-inner">
+      <div class="keep-inner-content --keep-image">
+        <div class="--get --move-svg --animatation-1s"></div>
       </div>
-      <div>icon</div>
+      <div class="keep-inner-content --keep-text">
+        <h2>Get yours notes</h2>
+        <p>Access your notes at any time </p>
+      </div>
     </div>
-    {{! box 2 }}
-    <div class="how-main-box">
-      <div class="how-main-box__inner">
-        <div class="how-main-box__square">cuadrado</div>
-        <span>fecha:</span>
+    {{! 2 fila }}
+    <div class="keep-inner">
+      <div class="keep-inner-content --keep-text">
+        <h2>Save yours important thoughts</h2>
+        <p>We will take care of yours notes, trust in us </p>
       </div>
-      <div>icon</div>
+      <div class="keep-inner-content --keep-image">
+        <div class="--post --move-svg --animatation-2s"></div>
+      </div>
     </div>
-    {{! box 3 }}
-    <div class="how-main-box">
-      <div class="how-main-box__inner">
-        <div class="how-main-box__square">cuadrado</div>
-        <span>fecha:</span>
+    {{! 3 fila }}
+    <div class="keep-inner">
+      <div class="keep-inner-content --keep-image">
+        <div class="--put --move-svg --animatation-3s"></div>
       </div>
-      <div>icon</div>
+      <div class="keep-inner-content --keep-text">
+        <h2>Update your notes</h2>
+        <p>If you make a mistake, dont worry, everything has a solution </p>
+      </div>
     </div>
-    {{! box 4 }}
-    <div class="how-main-box">
-      <div class="how-main-box__inner">
-        <div class="how-main-box__square">cuadrado</div>
-        <span>fecha:</span>
+    {{! 4 fila }}
+    <div class="keep-inner">
+      <div class="keep-inner-content --keep-text">
+        <h2>Delete your notes</h2>
+        <p>The task are done, ok!!, you just have to delete it </p>
       </div>
-      <div>icon</div>
+      <div class="keep-inner-content --keep-image">
+        <div class="--delete --move-svg --animatation-4s"></div>
+      </div>
     </div>
   </div>
-
+  <hr />
 </section>
-
 <script src="/js/btn-functions.js"></script>
+<script src="/js/observer.js"></script>

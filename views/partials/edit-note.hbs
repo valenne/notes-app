@@ -1,0 +1,63 @@
+<div class="container-edit --df-edit">
+
+  <form
+    class="--flex form-notes fix-edit-margin"
+    action="/update"
+    method="PUT"
+    enctype="multipart/form-data"
+    id="form-edit"
+  >
+    <h2 class="--title-h2 --margin-bottom">Update your note</h2>
+
+    {{! invisble data }}
+    <p style="display: none;" id="fecha">{{note.date}}</p>
+
+    <p style="display: none;" id="estatus">{{note.status_task}}</p>
+
+    <p style="display: none;" id="id-task">{{note.id}}</p>
+    {{! invisible data }}
+
+    <div class="nContainer">
+      <label class="--label-minwidth --label" for="nTitle">Title:</label>
+      <input
+        class="--form-inputwidth"
+        name="title"
+        type="text"
+        id="nTitle"
+        value="{{note.title_task}}"
+        required
+      />
+    </div>
+    <div class="nContainer">
+      <label class="--label-minwidth --label" for="nContent">Content:</label>
+      <textarea
+        class="--form-inputwidth"
+        name="content"
+        type="text"
+        id="nContent"
+        required
+      >{{note.description}}</textarea>
+    </div>
+
+    <div class="nContainer">
+      <label class="--label-minwidth --label" for="nDate">Date:</label>
+      <input
+        class="--form-inputwidth"
+        name="date"
+        type="date"
+        id="nDate"
+        required
+      />
+    </div>
+    <div class="nContainer">
+      <label class="--label-minwidth --label">is Completed?:</label>
+      <input type="checkbox" name="isCompleted" id="isComplete" />
+    </div>
+
+    <div class="nContainer">
+      <button type="submit" class="form-group btn">
+        Add
+      </button>
+    </div>
+  </form>
+</div>

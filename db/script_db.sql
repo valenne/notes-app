@@ -20,8 +20,7 @@ CREATE TABLE tasks (
   title_task VARCHAR(50) NOT NULL,
   description VARCHAR(200) NOT NULL,
   image_task VARCHAR(255),
-  date_created TIMESTAMP NOT NULL,
-  date_completed TIMESTAMP,
+  date TIMESTAMP NOT NULL,
   status_task BOOLEAN NOT NULL,
   user_id INT NOT NULL,
   FOREIGN KEY (user_id) REFERENCES users(id)

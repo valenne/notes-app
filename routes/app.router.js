@@ -4,6 +4,8 @@ const registerController = require("../controller/register.controller.js");
 const loginController = require("../controller/login.controller.js");
 const dashboardController = require("../controller/dashboard.controller.js");
 
+const notesController = require("../controller/notes.controller.js");
+
 // INDEX ROUTES
 router.get("/", indexController.getIndex);
 
@@ -17,5 +19,12 @@ router.post("/login", loginController.postLogin);
 
 // DASHBOARD
 router.get("/dashboard", dashboardController.getDashboard);
+router.get("/note/:id", dashboardController.getEditDashboardNote);
+
+// NOTES
+router.get("/notes", notesController.showNotes);
+router.post("/note", notesController.addingNote);
+router.put("/note", notesController.updateNote);
+router.delete("/note/:id", notesController.deleteNote);
 
 module.exports = router;

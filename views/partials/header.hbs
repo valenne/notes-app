@@ -1,0 +1,23 @@
+<header class="header">
+  <div class="header-box__logo">
+    <a class="header-box__logo-link" href="/"><ion-icon
+        class="header-logo"
+        name="duplicate-outline"
+      ></ion-icon>
+      <div>
+        <span class="header-logo__text">yourNotes</span>
+      </div></a>
+  </div>
+
+  <div class="header-logo__socials">
+    <div class="--split-user">
+      <p class="--username">{{username}}</p>
+
+      <ion-icon
+        class="header-logo --logout"
+        onclick="deleteCookie()"
+        name="log-out-outline"
+      ></ion-icon>
+    </div>
+  </div>
+</header>

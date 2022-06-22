@@ -1,0 +1,18 @@
+@media only screen and (max-width: 768px) {
+  .keep-inner {
+    grid-template-areas:
+      "texto"
+      "imagen";
+    grid-row-gap: 0px;
+    margin-bottom: 6.4rem;
+  }
+  .--keep-image {
+    grid-area: imagen;
+  }
+
+  .--keep-text {
+    grid-area: texto;
+    height: 150px;
+    width: 100%;
+  }
+}

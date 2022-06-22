@@ -1,0 +1,45 @@
+<div class="show-notes">
+  <div class="sn-container">
+    <div class="card">
+      {{#each notes}}
+        <div class="container-card">
+          <div class="card-body">
+            <div>
+              <input class="isCheck" type="checkbox" style="display: none;" {{#if this.status_task }} checked {{/if}} />
+              <span style="display:none;" class="complete" id="bannerComplete">Completed</span>
+            </div>
+          
+            <div class="card-text">
+              <h2 class="card-title">{{this.title_task}}</h2>
+              <p>{{this.description}}</p>
+              <p>{{this.date}}</p>           
+            </div>
+            <div class="card-img">
+              <img src="/uploads/{{this.image_task}}" alt="" />
+            </div>           
+            <div class="card-icons">
+              <div class="card-icons--options">
+                <a class="icon-card" onclick="editNote({{this.id}})">
+                  <ion-icon
+                    class="--icons-opt --green-icon"
+                    name="build-outline"
+                  ></ion-icon>
+                </a>
+                <a class="icon-card" onclick="deleteNote({{this.id}})">
+                  <ion-icon
+                    class="--icons-opt --red-icon"
+                    name="trash-outline"
+                  ></ion-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+<script src="/js/delete.note.js"></script>
+<script src="/js/edit.note.dashboard.js"></script>
+<script src="/js/note.check.js"></script>

@@ -1,5 +1,32 @@
-<section class="dashboard">
-  <div>
+  {{>header}}
+    {{#if trigger.key}}
+      {{#equal trigger.template "post"}}
+        <section class="dashboard">
+          <div class="dash-container">
+            <div class="dash-container-inner">
+              <section class="add-box">
+                {{>add-notes}}
+              </section>
+              <section class="box-show">
+                {{>show-notes}}
+              </section>
+           </div>
+          </div>
+        </section>
+      {{/equal}}
+    {{/if}}
+   
 
-  </div>
-</section>
+
+
+{{#if trigger.key}}
+      {{#equal trigger.template "update"}}
+      
+          <div class="box-edit">
+            {{>edit-note}}
+          </div>
+  
+      {{/equal}}
+    {{/if}}
+
+ 

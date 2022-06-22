@@ -1,0 +1,66 @@
+<div class="dash-formNotes">
+
+  <form
+    class="--flex form-notes"
+    action="/addNote"
+    method="POST"
+    enctype="multipart/form-data"
+    id="form-add"
+  >
+    <h2 class="--title-h2 --margin-bottom">+ Your Notes</h2>
+    <div class="nContainer">
+      <label class="--label-minwidth --label" for="nTitle">Title:</label>
+      <input
+        class="--form-inputwidth"
+        name="title"
+        type="text"
+        id="nTitle"
+        onfocus="this.value=''"
+        required
+      />
+    </div>
+    <div class="nContainer">
+      <label class="--label-minwidth --label" for="nContent">Content:</label>
+      <textarea
+        class="--form-inputwidth"
+        name="content"
+        type="text"
+        id="nContent"
+        onfocus="this.value=''"
+        required
+      ></textarea>
+    </div>
+
+    <div class="nContainer">
+      <label class="--label-minwidth --label" for="nDate">Date:</label>
+      <input
+        class="--form-inputwidth"
+        name="date"
+        type="date"
+        id="nDate"
+        onfocus="this.value=''"
+        required
+      />
+    </div>
+    <div class="nContainer">
+      {{! <label class="--label-minwidth" for="nImage">Image:</label>  }}
+      <input
+        style="color: var(--main-color-dark-light); font-weight:400;"
+        class="--form-inputwidth noteImage"
+        name="image"
+        accept="image/*"
+        type="file"
+        id="nImage"
+        onfocus="this.value=''"
+      />
+    </div>
+    <div class="nContainer">
+      <button type="submit" id="btnAddNote" class="form-group btn">
+        Add
+      </button>
+    </div>
+  </form>
+</div>
+
+<script src="/js/add.note.js"></script>
+<script src="/js/edit.note.dashboard.js"></script>

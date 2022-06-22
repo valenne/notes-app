@@ -3,6 +3,9 @@ const jwt = require("jsonwebtoken");
 const { getUser } = require("../db/queries.db.js");
 require("dotenv").config();
 
+// change this time to a more secure one
+const timeToExpired = 900;
+
 module.exports = {
   getLogin: (_, res) => {
     res.status(200).render("login", {
@@ -22,13 +25,11 @@ module.exports = {
         code: 401,
       });
     } else {
-      console.log(`first`);
       // verify the password encrypted
       const match = await bcrypt.compare(password, user.password);
-      console.log(match);
+      console.log(`password match:`, match);
 
       if (!match) {
-        console.log(`second`);
         res.status(401).send({
           message: "Error password do not match",
           code: 401,
@@ -37,7 +38,7 @@ module.exports = {
         // create the jwt token
         let token = jwt.sign(
           {
-            exp: Math.floor(Date.now() / 1000) + 60 * 60,
+            exp: Math.floor(Date.now() / 1000) + timeToExpired,
             data: user,
           },
           process.env.SECRET_KEY
@@ -45,14 +46,23 @@ module.exports = {
 
         // set cookie data config
         const auth = {
-          token: token,
+          token,
           id: user.id,
           username: user.username,
+          email: user.email,
         };
 
         let name = `${user.first_name} ${user.last_name}`;
 
-        res.status(200).cookie("auth", auth).send({ name });
+        res
+          .status(200)
+          .cookie("auth", auth, {
+            secure: true,
+            sameSite: "Strict",
+            expires: new Date(Date.now() + timeToExpired * 1000),
+          })
+          .send({ name });
+        console.log(`User was found and logged in`);
       }
     }
   },
