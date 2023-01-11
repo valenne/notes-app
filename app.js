@@ -8,9 +8,8 @@ const cookieParser = require("cookie-parser");
 const Handlebars = require("handlebars");
 
 //
-
-const { getNote, updateNote } = require("./db/queries.db.js");
-const { formatDate } = require("./public/js/format.date.js");
+// const { getNote, updateNote } = require("./db/queries.db.js");
+// const { formatDate } = require("./public/js/format.date.js");
 //
 require("dotenv").config();
 
