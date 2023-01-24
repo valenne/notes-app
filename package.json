@@ -5,13 +5,13 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js "
   },
   "author": "Nelson Venegas",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.16",
-    "start": "node app.js "
+    "nodemon": "^2.0.16"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
