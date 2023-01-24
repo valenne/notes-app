@@ -10,7 +10,8 @@
   "author": "Nelson Venegas",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "start": "node app.js "
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
