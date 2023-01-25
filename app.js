@@ -14,7 +14,7 @@ const Handlebars = require("handlebars");
 require("dotenv").config();
 
 // + importing our variables
-const { port } = require("./config/server.config.js");
+const { PORT } = require("./config/server.config.js");
 
 // importing routes
 const routesController = require("./routes/app.router.js");
@@ -82,6 +82,6 @@ app.get("*", (_, res) => {
 });
 
 // server Listening
-app.listen(port, () => {
-  console.log(`Server is running on port: http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on PORT: http://localhost:${PORT}`);
 });
