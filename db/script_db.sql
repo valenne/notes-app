@@ -25,3 +25,5 @@ CREATE TABLE tasks (
   user_id INT NOT NULL,
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+INSERT INTO users (first_name, last_name, email, username, password) VALUES ("piero", "venegas", "piero@gmail.com", "pipo", "12345678");
