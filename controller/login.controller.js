@@ -41,7 +41,7 @@ module.exports = {
             exp: Math.floor(Date.now() / 1000) + timeToExpired,
             data: user,
           },
-          process.env.SECRET_KEY
+          process.env.SECRET_KEY || "your_secret_key"
         );
 
         // set cookie data config

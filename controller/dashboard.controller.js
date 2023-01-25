@@ -10,37 +10,41 @@ module.exports = {
       const { auth } = req.cookies;
       const { id, username, token } = auth;
 
-      jwt.verify(token, process.env.SECRET_KEY, async (err, decoded) => {
-        if (err) {
-          return res.status(401).render("login", {
-            title: `Login`,
-          });
-        } else {
-          // const user = await getUser(email);
-          const notes = await getNotes(id);
-
-          if (notes === null) {
-            res.status(200).render("dashboard", {
-              title: `Dashboard`,
-              username,
-              notes: notes === null ? [] : notes,
-              trigger: { key: false, template: "post" },
+      jwt.verify(
+        token,
+        process.env.SECRET_KEY || "your_secret_key",
+        async (err, decoded) => {
+          if (err) {
+            return res.status(401).render("login", {
+              title: `Login`,
             });
           } else {
-            // getting just the date of the notes
-            notes.forEach((note) => {
-              note.date = formatDate(note.date);
-            });
+            // const user = await getUser(email);
+            const notes = await getNotes(id);
 
-            res.status(200).render("dashboard", {
-              title: `Dashboard`,
-              username,
-              notes: notes === null ? [] : notes,
-              trigger: { key: true, template: "post" },
-            });
+            if (notes === null) {
+              res.status(200).render("dashboard", {
+                title: `Dashboard`,
+                username,
+                notes: notes === null ? [] : notes,
+                trigger: { key: false, template: "post" },
+              });
+            } else {
+              // getting just the date of the notes
+              notes.forEach((note) => {
+                note.date = formatDate(note.date);
+              });
+
+              res.status(200).render("dashboard", {
+                title: `Dashboard`,
+                username,
+                notes: notes === null ? [] : notes,
+                trigger: { key: true, template: "post" },
+              });
+            }
           }
         }
-      });
+      );
     }
   },
 
@@ -52,36 +56,40 @@ module.exports = {
       const { auth } = req.cookies;
       const { username, token } = auth;
 
-      jwt.verify(token, process.env.SECRET_KEY, async (err, decoded) => {
-        if (err) {
-          res.status(401).render("login", {
-            title: `Login`,
-          });
-        } else {
-          console.log("token valid");
-          try {
-            const notes = await getNote(id);
-
-            // formatting the date
-            notes.date = formatDateDMY(notes.date);
-
-            console.log(notes);
-            // console.log(note);
-            res.status(200).render("dashboard", {
-              title: "Update",
-              note: notes === null ? [] : notes,
-              trigger: { key: true, template: "update" },
-              username,
+      jwt.verify(
+        token,
+        process.env.SECRET_KEY || "your_secret_key",
+        async (err, decoded) => {
+          if (err) {
+            res.status(401).render("login", {
+              title: `Login`,
             });
-          } catch (err) {
-            console.log(`debug: ${err}`);
-            res.status(500).send({
-              message: "Error",
-              error: `${err}`,
-            });
+          } else {
+            console.log("token valid");
+            try {
+              const notes = await getNote(id);
+
+              // formatting the date
+              notes.date = formatDateDMY(notes.date);
+
+              console.log(notes);
+              // console.log(note);
+              res.status(200).render("dashboard", {
+                title: "Update",
+                note: notes === null ? [] : notes,
+                trigger: { key: true, template: "update" },
+                username,
+              });
+            } catch (err) {
+              console.log(`debug: ${err}`);
+              res.status(500).send({
+                message: "Error",
+                error: `${err}`,
+              });
+            }
           }
         }
-      });
+      );
     }
   },
 };
