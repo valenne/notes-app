@@ -1,8 +1,9 @@
 const { db } = require("../config/database.config.js");
-const pool = require("../config/db.string.js");
+// const pool = require("../config/db.string.js");
+const { Pool } = require("pg");
 
 // instance of the pool
-// const pool = new Pool(db);
+const pool = new Pool(db);
 
 module.exports = {
   newUser: async (firstName, lastName, email, username, password) => {
