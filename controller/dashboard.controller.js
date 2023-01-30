@@ -27,7 +27,7 @@ module.exports = {
                 title: `Dashboard`,
                 username,
                 notes: notes === null ? [] : notes,
-                trigger: { key: false, template: "post" },
+                trigger: { key: true, template: "post" },
               });
             } else {
               // getting just the date of the notes
