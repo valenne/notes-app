@@ -46,7 +46,7 @@ app.use(express.static(__dirname + "/public"));
 app.engine(
   "hbs",
   exphbs.engine({
-    defaultLaoout: "main",
+    defaultLayout: "main",
     layoutDir: `${__dirname}/views/layouts`,
     partialDir: `${__dirname}/views/partials`,
     extname: ".hbs",
