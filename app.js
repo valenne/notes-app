@@ -39,7 +39,7 @@ app.use(cookieParser());
 
 // public folder
 app.use(express.static(__dirname + "/node_modules/bootstrap/dist"));
-app.use("/img", express.static(path.join(__dirname, "/public/img")));
+app.use("/img", express.static(__dirname + "/public/img"));
 
 // config handlebars
 
