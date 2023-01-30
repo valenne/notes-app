@@ -1,25 +1,29 @@
 // set value on a inputdate
 
-const fecha = document.querySelector("#fecha").innerHTML;
+const settingDate = () => {
+  const fecha = document.querySelector("#fecha").innerHTML;
 
-// make a array of date
-const newFecha = fecha.split("/");
+  // make a array of date
+  const newFecha = fecha.split("/");
 
-// set if the day and month are less than 10 to add a 0
-for (i = 0; i < newFecha.length; i++) {
-  if (Number(newFecha[i] < 10)) {
-    newFecha[i] = "0" + newFecha[i];
+  // set if the day and month are less than 10 to add a 0
+  for (i = 0; i < newFecha.length; i++) {
+    if (Number(newFecha[i] < 10)) {
+      newFecha[i] = "0" + newFecha[i];
+    }
   }
-}
 
-// format the date as year/month/day
-const fechaYMD = `${newFecha[0]}-${newFecha[1]}-${newFecha[2]}`;
+  // format the date as year/month/day
+  const fechaYMD = `${newFecha[0]}-${newFecha[1]}-${newFecha[2]}`;
 
-// capture the input node
-const date = document.querySelector("#nDate");
+  // capture the input node
+  const date = document.querySelector("#nDate");
 
-// set the value of the input
-date.value = fechaYMD;
+  // set the value of the input
+  return (date.value = fechaYMD);
+};
+
+settingDate();
 
 //CHECKBOX
 
@@ -34,3 +38,5 @@ if (estatus === "true") {
 } else {
   checkbox.checked = false;
 }
+
+export default settingDate;

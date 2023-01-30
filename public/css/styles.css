@@ -724,8 +724,19 @@ body {
 /*----------------------------------------*/
 /*---------------DASHBOARD----------------*/
 /*----------------------------------------*/
-.dashboard {
-  position: relative;
+body {
+  max-height: 100vh;
+  background: #1f1c2c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #928dab,
+    #1f1c2c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #928dab,
+    #1f1c2c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .add-box {
@@ -748,17 +759,6 @@ body {
   min-width: 100%;
   min-height: 100%;
   z-index: -9999;
-  background: #1f1c2c; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to left,
-    #928dab,
-    #1f1c2c
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to left,
-    #928dab,
-    #1f1c2c
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   transform: scaleY(-1);
   background-size: cover;
